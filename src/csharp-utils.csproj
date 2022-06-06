@@ -5,6 +5,12 @@
     <RootNamespace>csharp_utils</RootNamespace>
     <Nullable>enable</Nullable>
     <LangVersion>9.0</LangVersion>
+      <PackageId>CSharpUtils</PackageId>
+      <Version>1.0.0</Version>
+      <Authors>TJbrunk</Authors>
+      <Company>NA</Company>
+      <PackageDescription>This add csharp utility stuff</PackageDescription>
+      <RepositoryUrl>https://github.com/TJbrunk/csharp-utils</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

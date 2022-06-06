@@ -1,15 +1,19 @@
-﻿namespace csharp_utils {
+﻿using System;
+
+namespace csharp_utils {
     /// <summary>
     /// Result child class of a typical scenario where TError is a string
     /// </summary>
     /// <typeparam name="TOk"></typeparam>
-    public class Result<TOk> : Result<TOk, string> {
+    public class Result<TOk> : Result<TOk, string>
+    {
         public static implicit operator Result<TOk>(string error) => new(true, default, error);
 
         public static implicit operator Result<TOk>(TOk ok) => new(true, ok, default);
 
         private Result(bool isOk, TOk? okValue, string? errorValue) : base(isOk, okValue, errorValue) { }
     }
+
 
     /// <summary>
     /// Base Result Class.
