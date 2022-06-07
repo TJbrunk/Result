@@ -3,17 +3,12 @@ using System.Windows.Controls;
 
 namespace wpf_utils
 {
-    /// <summary>
-    /// Interaction logic for LabeledControl.xaml
-    /// </summary>
-    public partial class LabeledControl : UserControl
+    public class LabeledControl : ContentControl
     {
-        public LabeledControl()
+        static LabeledControl()
         {
-
-            InitializeComponent();
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(LabeledControl), new FrameworkPropertyMetadata(typeof(LabeledControl)));
         }
-
 
         public string Label
         {
@@ -37,6 +32,5 @@ namespace wpf_utils
 
         public static readonly DependencyProperty RequiredProperty =
             DependencyProperty.Register("Required", typeof(bool), typeof(LabeledControl), new PropertyMetadata(false));
-
     }
 }
