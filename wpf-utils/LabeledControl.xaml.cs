@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace wpf_utils
 {
@@ -22,6 +10,7 @@ namespace wpf_utils
     {
         public LabeledControl()
         {
+
             InitializeComponent();
         }
 
@@ -40,37 +29,14 @@ namespace wpf_utils
             );
 
 
-        public FrameworkElement Control
-        {
-            get { return (FrameworkElement)GetValue(ControlProperty); }
-            set { SetValue(ControlProperty, value); }
-        }
-
-        public static readonly DependencyProperty ControlProperty =
-            DependencyProperty.Register("Control",
-                typeof(FrameworkElement),
-                typeof(LabeledControl),
-                new PropertyMetadata());
-
-
-
-
         public bool Required
         {
             get { return (bool)GetValue(RequiredProperty); }
             set { SetValue(RequiredProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for Required.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty RequiredProperty =
-            DependencyProperty.Register("Required", typeof(bool), typeof(LabeledControl), new PropertyMetadata(false, HandleRequiredPropChanged));
+            DependencyProperty.Register("Required", typeof(bool), typeof(LabeledControl), new PropertyMetadata(false));
 
-        private static void HandleRequiredPropChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            if(d is LabeledControl ctrl && e.NewValue is bool required)
-            {
-                ctrl.RowLabel.FontWeight = required ? FontWeights.Bold : FontWeights.Regular;
-            }
-        }
     }
 }

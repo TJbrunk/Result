@@ -22,24 +22,18 @@
             Grid.Row="0"
             Label="_Label"
             Required="True">
-            <local:LabeledControl.Control>
-                <TextBox Text="Some text from the host" />
-            </local:LabeledControl.Control>
+            <TextBox Text="Some text from the host" />
         </local:LabeledControl>
 
         <local:LabeledControl
             Grid.Row="1"
             Margin="0"
             Label="_Combo">
-            <local:LabeledControl.Control>
-                <ComboBox Width="120" HorizontalAlignment="Left" />
-            </local:LabeledControl.Control>
+            <ComboBox Width="120" HorizontalAlignment="Left" />
         </local:LabeledControl>
 
         <local:LabeledControl Grid.Row="2" Label="_Text">
-            <local:LabeledControl.Control>
-                <TextBox Text="Some text from the host" />
-            </local:LabeledControl.Control>
+            <TextBox Text="Some text from the host" />
         </local:LabeledControl>
 
         <Grid Grid.Row="3">
